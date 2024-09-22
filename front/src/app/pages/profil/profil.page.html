@@ -1,0 +1,53 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button defaultHref="/tabs/home-page" slot="start"></ion-back-button>
+    <ion-icon name="shirt-outline" slot="start"></ion-icon>
+    <ion-title slot="start">SaveThePlate</ion-title>
+    <ion-icon slot="end" name="log-out-outline" (click)="logout()" class="logout-button"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="cover-container">
+    <img [src]="covpic" class="couverture">
+  </div>
+
+  <!-- <div class="profile-picture-container">
+    <img [src]="image" alt="Profile Picture" class="profile-picture">
+  </div> -->
+  <div class="profile-picture-container">
+    <img [src]="image" alt="Profile Picture" class="profile-picture">
+</div>
+
+ 
+  <div class="personal-info">
+    <ion-item lines="none">
+      <ion-icon name="person-outline" class="info-icon" slot="start"></ion-icon>
+      <ion-label class="usernameText"> {{username}} </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="call-outline" class="info-icon" slot="start"></ion-icon>
+      <ion-label> {{phone}} </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="mail-outline" class="info-icon" slot="start"></ion-icon>
+      <ion-label> {{email}} </ion-label>
+    </ion-item>
+  </div>
+  
+  <ion-button expand="block" fill="outline" [routerLink]="['/edit-profile']" class="edit-button">
+    Edit Profile
+    <ion-icon name="chevron-forward-outline" slot="end"></ion-icon>
+  </ion-button>
+
+  <p class="text">My Articles:</p>
+
+  <ion-row class="ion-justify-content-center row articles-container">
+    <ng-container *ngFor="let article of myarticles">
+        <app-myarticles class="col-12" [article]="article"></app-myarticles>
+    </ng-container>
+  </ion-row>
+</ion-content>

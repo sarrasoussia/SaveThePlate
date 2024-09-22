@@ -1,0 +1,42 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="dismiss()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Edit Article</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-col >
+  <ion-card class="inputs">
+    <ion-list >
+   
+      <ion-item class="img">
+        <ion-col>
+        <p class="titre">Select an image</p>
+        <ion-img alt="" [src]="editedArticle.image"></ion-img>
+        <input  type="file" accept="image/*" (change)="convertToBase64($event)"/>
+        </ion-col>
+      </ion-item>
+
+      <ion-item class="name">
+        <ion-label position="floating" >Name</ion-label>
+        <ion-input type="text" [(ngModel)]="editedArticle.name"></ion-input>
+      </ion-item>
+
+      <ion-item class="price">
+        <ion-label position="floating">Price</ion-label>
+        <ion-input type="text" [(ngModel)]="editedArticle.price"></ion-input>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+  <ion-row class="row">
+    <button (click)="saveChanges()" class="col-4 save bright ">Save</button>
+    <button  (click)="deleteArticle()" class="col-6 delete ">Delete article</button>
+  </ion-row>
+</ion-col>
+</ion-content>

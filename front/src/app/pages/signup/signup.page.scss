@@ -1,0 +1,78 @@
+.content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: fit-content;
+  }
+
+  .background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../../../assets/login.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; 
+  }
+  
+  
+  .signupcontent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .signup-section {
+    margin-top: 30px;
+    margin-left: -10px;
+    font-size: 2em; 
+    color: black;
+    font-weight: bold;
+  }
+  .inputs{
+    margin-bottom: 30px;
+    margin-right: 10px;
+
+  }
+  .color{
+    background-color:rgba(252, 252, 252, 0);
+}
+
+
+.takePicButton {
+  color: black;
+  background: rgb(91, 188, 164); 
+  border: 2px solid black; 
+  border-radius: 10px;
+}
+
+.image-item {
+  --background: rgba(255, 255, 255, 0); 
+  border: 1px solid rgba(0, 0, 0, 0); 
+
+}
+
+ion-item {
+  color: black;
+  border-radius: 10px;
+  border: 2px solid black; 
+  margin-top: 15px;
+  --background: rgba(255, 255, 255, 0.37);
+  margin-bottom: 14px; 
+}
+.signup{
+  border: 2px solid black; 
+  border-radius: 50px; 
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.481); 
+  margin-top: -20px;
+}
+
+
+.linkToLogIn{
+  color: black;
+  margin-top: 40px;
+}

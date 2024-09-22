@@ -1,0 +1,41 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button defaultHref="/tabs/home-page" slot="start"></ion-back-button>
+    <ion-icon name="shirt-outline" slot="start"></ion-icon>
+    <ion-title slot="start">SaveThePlate</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="cover-container">
+    <img [src]="covpic" class="couverture">
+  </div>
+
+  <div class="profile-picture-container">
+    <img [src]="image" alt="Profile Picture" class="profile-picture">
+    <ion-label class="name">{{username}}</ion-label>
+  </div>
+ 
+  <div class="personal-info">
+    <ion-item lines="none">
+      <ion-icon name="call-outline" class="info-icon" slot="start"></ion-icon>
+      <ion-label style="font-size: 90%;"> {{phone}} </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-icon name="mail-outline" class="info-icon" slot="start"></ion-icon>
+      <ion-label style="font-size:  90%;"> {{email}} </ion-label>
+    </ion-item>
+  </div>
+  
+
+
+  <p class="text ">Articles :</p>
+
+  <ion-row class="ion-justify-content-center row aticlescontainer">
+    <ng-container *ngFor="let article of myarticles">
+        <app-profile-article class="col-12" [article]="article"></app-profile-article>
+    </ng-container>
+  </ion-row>
+</ion-content>

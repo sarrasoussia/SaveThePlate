@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button default-href="/tabs/home-page"></ion-back-button>
+    </ion-buttons>
+    <ion-title>My Favorites</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center ">
+    <ion-col size-lg="3" size-md="4" size-sm="6" *ngFor="let article of favItems">
+      <app-favarticles [article]="article"></app-favarticles>
+    </ion-col>
+  </ion-row>
+</ion-content>
