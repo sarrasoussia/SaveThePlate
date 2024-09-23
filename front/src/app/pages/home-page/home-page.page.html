@@ -1,6 +1,5 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-icon slot="start" name="shirt-outline"></ion-icon>
     <ion-title>SaveThePlate</ion-title>
     <ion-buttons slot="end">
       <ion-button fill="clear" [routerLink]="['/cart']">
@@ -11,17 +10,13 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-searchbar placeholder="Search for clothes..." debounce="500" [(ngModel)]="searchText"></ion-searchbar>
+  <ion-searchbar placeholder="Search for your fav spot..." debounce="500" [(ngModel)]="searchText"></ion-searchbar>
 
-  <!-- <div class="image-container">
-    <img src="../../../assets/maincover.gif" alt="Cover Image" class="cover">
-  </div> -->
 
   <swiper-container class="image-container" [slidesPerView]="1" [loop]="true">
-    <swiper-slide><img src="assets/covers/maincover.gif" alt="Slide 1"></swiper-slide>
-    <!-- <swiper-slide><img src="assets/covers/mainpage.gif" alt="Slide 2"></swiper-slide> -->
-    <swiper-slide><img src="assets/covers/6.png" alt="Slide 3"></swiper-slide>
-    <swiper-slide><img src="assets/covers/5.png" alt="Slide 4"></swiper-slide>
+    <swiper-slide><img src="assets/tip1.png" alt="Slide 1"></swiper-slide>
+    <swiper-slide><img src="assets/tip2.png" alt="Slide 2"></swiper-slide>
+    <swiper-slide><img src="assets/tip3.png" alt="Slide 3"></swiper-slide>
   </swiper-container>
 
   <ion-card>
@@ -29,12 +24,10 @@
       <h1>Categories</h1>
       <div class="category-buttons-container">
         <ion-button class="button" color="dark"  (click)="womenClickedFunction()">
-          <ion-icon slot="start" name="woman"></ion-icon>
-          Women
+          Sweet
         </ion-button>
         <ion-button class="button" color="dark" (click)="menClickedFunction()" >
-          <ion-icon slot="start" name="man"></ion-icon>
-          Men
+          Savoury
         </ion-button>
       </div>
     </ion-card-content>

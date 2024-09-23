@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonicSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-main-page',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main-page.page.scss'],
 })
 export class MainPagePage implements OnInit {
+
+  swiperModules = [IonicSlides];
 
   constructor() { }
 

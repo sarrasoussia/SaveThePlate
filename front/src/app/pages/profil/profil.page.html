@@ -1,7 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-back-button defaultHref="/tabs/home-page" slot="start"></ion-back-button>
-    <ion-icon name="shirt-outline" slot="start"></ion-icon>
     <ion-title slot="start">SaveThePlate</ion-title>
     <ion-icon slot="end" name="log-out-outline" (click)="logout()" class="logout-button"></ion-icon>
   </ion-toolbar>
@@ -12,10 +11,6 @@
   <div class="cover-container">
     <img [src]="covpic" class="couverture">
   </div>
-
-  <!-- <div class="profile-picture-container">
-    <img [src]="image" alt="Profile Picture" class="profile-picture">
-  </div> -->
   <div class="profile-picture-container">
     <img [src]="image" alt="Profile Picture" class="profile-picture">
 </div>
